@@ -1,7 +1,7 @@
 services:
 
 
-  name: slack-ai-agent
+ 
   runtime: node
   plan: free
 
@@ -41,5 +41,4 @@ services:
 
 databases:
 
-  plan: free
 
