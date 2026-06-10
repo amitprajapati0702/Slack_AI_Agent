@@ -1,44 +1,36 @@
 services:
+  - type: web
+    name: slack-ai-agent
+    runtime: node
+    plan: free
 
+    buildCommand: npm install
+    startCommand: npm start
 
- 
-  runtime: node
-  plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
 
-  buildCommand: npm install
-  startCommand: npm start
+      - key: OPENAI_API_KEY
+        sync: false
 
-  healthCheckPath: /health
+      - key: SLACK_BOT_TOKEN
+        sync: false
 
-  envVars:
+      - key: SLACK_APP_TOKEN
+        sync: false
 
- 
-    value: production
+      - key: SLACK_SIGNING_SECRET
+        sync: false
 
-  
-    value: 10000
+      - key: SLACK_PRIVATE_CHANNEL_ID
+        sync: false
 
+      - key: COMPANY_NAME
+        sync: false
 
-    fromDatabase:
-    name: slack-ai-agent-db
-    property: connectionString
+      - key: COMPANY_PRODUCT
+        sync: false
 
- 
-    sync: false
-
-
-    sync: false
-
-    sync: false
-
-    sync: false
-
-    sync: false
-
-    sync: false
-
-    sync: false
-
-databases:
-
-
+      - key: DATABASE_URL
+        sync: false
