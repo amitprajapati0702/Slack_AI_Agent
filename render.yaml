@@ -1,6 +1,6 @@
 services:
 
-* type: web
+
   name: slack-ai-agent
   runtime: node
   plan: free
