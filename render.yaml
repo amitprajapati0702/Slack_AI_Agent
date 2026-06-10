@@ -12,40 +12,34 @@ services:
 
   envVars:
 
-  * key: NODE_ENV
+ 
     value: production
 
-  * key: PORT
+  
     value: 10000
 
-  * key: DATABASE_URL
+
     fromDatabase:
     name: slack-ai-agent-db
     property: connectionString
 
-  * key: OPENAI_API_KEY
+ 
     sync: false
 
-  * key: SLACK_BOT_TOKEN
+
     sync: false
 
-  * key: SLACK_SIGNING_SECRET
     sync: false
 
-  * key: SLACK_APP_TOKEN
     sync: false
 
-  * key: SLACK_PRIVATE_CHANNEL_ID
     sync: false
 
-  * key: COMPANY_NAME
     sync: false
 
-  * key: COMPANY_PRODUCT
     sync: false
 
 databases:
 
-* name: slack-ai-agent-db
   plan: free
 
